@@ -1,0 +1,11 @@
+#gridContainer{
+    margin:0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 2px solid black;
+}
+.gridCell{
+    aspect-ratio: 1/1;
+}
