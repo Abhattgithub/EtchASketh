@@ -11,6 +11,13 @@ document.getElementById("createSketchpad").addEventListener("click",()=>{
         console.log(gridCount+"exceeds limit");
 })
 
+document.getElementById("clearSketchpad").addEventListener("click", ()=>{
+    let cells = document.getElementsByClassName("gridCell")
+    Array.from(cells).forEach(cell =>{
+        cell.style.backgroundColor = "white"
+    })
+})
+
 function makeGrid(gridCount){
     container.innerHTML=""
     let cellWidth=100/gridCount
@@ -32,9 +39,6 @@ function setHover(){
             let greenShade = Math.floor(Math.random()*256)
     
             cell.style.backgroundColor = `rgb(${redShade},${blueShade},${greenShade})`;
-        })
-        cell.addEventListener("mouseout",()=>{
-            cell.style.backgroundColor = `white`;
         })
     })
 }
